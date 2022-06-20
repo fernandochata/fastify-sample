@@ -1,0 +1,29 @@
+{
+  "name": "fastify-sample",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandochata/fastify-sample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fernandochata/fastify-sample/issues"
+  },
+  "homepage": "https://github.com/fernandochata/fastify-sample#readme",
+  "dependencies": {
+    "fastify": "^4.0.3",
+    "mongoose": "^6.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
