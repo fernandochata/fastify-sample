@@ -1,4 +1,4 @@
-import { getProducts, getProduct, createProduct, updateProduct, deleteProduct } from '../controllers/product.controlller.js'
+import { getProducts, getProduct, createProduct, updateProduct, deleteProduct } from '../controllers/product.controller.js'
 
 export default [
     {
@@ -6,27 +6,21 @@ export default [
         method: 'GET',
         handler: getProducts
     },{
-        url: '/product/:id',
+        url: '/products/:id',
         method: 'GET',
         handler: getProduct
     },{
         url: '/products',
         method: 'POST',
-        handler: (request, reply) => {
-            reply.send('create products')
-        }
+        handler: createProduct
     },{
         url: '/products/:id',
         method: 'PUT',
-        handler: (request, reply) => {
-            reply.send('update product')
-        }
+        handler: updateProduct
     },{
         url: '/products/:id',
         method: 'DELETE',
-        handler: (request, reply) => {
-            reply.send('delete product')
-        }
+        handler: deleteProduct
     }
 
 
