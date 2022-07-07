@@ -12,7 +12,7 @@ npm install
 npm run dev
 ```
 
-- El servidor correrá en http://\<HOST>:\<PORT>/products, por defecto en http://127.0.0.1:5000/products
+- El servidor correrá en http://\<HOST>:\<PORT>/products, por defecto en http://127.0.0.1:5000/products/
 
 - El modelo de producto ocupado:
 ```sql
@@ -31,15 +31,15 @@ npm run dev
 ```
 {
     getProducts: {
-        url: '/products',
+        url: '/products/',
         method: 'GET'
     },
-    getProducto: {
+    getProduct: {
         url: '/products/:id',
         method: 'GET'
     },
     createProduct: {
-        url: '/products',
+        url: '/products/',
         method: 'POST'
     },
     updateProduct: {
