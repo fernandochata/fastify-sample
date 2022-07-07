@@ -1,13 +1,56 @@
-# fastify-sample
+# Fastify
 
-Ejemplo simple de FASTIFY https://www.fastify.io/docs/latest/Guides/Getting-Started/#your-first-server
+Ejemplo simple de FASTIFY, info en https://www.fastify.io/docs/latest/Guides/Getting-Started/#your-first-server
 
-Se conecta a una base de datos mongoDB
+- Instalar dependencias
+- Se requiere las siguientes variables de entorno [MONGODB_URI HOST PORT], en caso de no encontrarlas se usan algunas por defecto
+- Se require una instancia activa de MongoDB
+- Ejecutar script en modo desarrollo
 
-Se requiere las siguientes variables de entorno
+```
+npm install
+npm run dev
+```
 
-MONGODB_URI
-HOST
-PORT
+- El servidor correrá en http://\<HOST>:\<PORT>/products
 
-Si no se encuentran se intentará conectar alguna instancia local
+- El modelo de producto ocupado:
+```sql
+{
+    product: 
+    {
+        name :          String
+        price:          Number
+        stock:          Number
+        description?:   String
+    }
+}
+```
+
+- Las rutas (CRUD básico) para acceder a la info de la API son:
+```
+{
+    getProducts: {
+        url: '/products',
+        method: 'GET'
+    },
+    getProducto: {
+        url: '/products/:id',
+        method: 'GET'
+    },
+    createProduct: {
+        url: '/products',
+        method: 'POST'
+    },
+    updateProduct: {
+        url: '/products/:id',
+        method: 'PUT'
+    },
+    deleteProduct: {
+        url: '/products/:id',
+        method: 'DELETE'
+    }
+}
+```
+
+- TODO: Terminar de agregar comentarios en product.controller.js
