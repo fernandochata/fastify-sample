@@ -52,5 +52,6 @@ npm run dev
     }
 }
 ```
-
-- TODO: Terminar de agregar comentarios en product.controller.js
+- TODO: ✅ Comentar estados en product.controller.js
+- TODO: ❌ Terminar de agregar comentarios en product.controller.js
+- TODO: ❌ Crear instancia live en Heroku
